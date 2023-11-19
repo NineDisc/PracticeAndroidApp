@@ -1,6 +1,8 @@
 package com.example.practiceandroid.ui
 
+import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Surface
@@ -23,8 +25,10 @@ fun PracticeApp() {
             bottomBar = {
                 PracticeNavigationBar(navController = navController)
             }
-        ) {
-            PracticeNavHost(navController)
+        ) { padding ->
+            Row(modifier = Modifier.padding(padding)) {
+                PracticeNavHost(navController)
+            }
         }
     }
 }
