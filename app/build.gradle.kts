@@ -2,6 +2,7 @@
 plugins {
     alias(libs.plugins.androidApplication)
     alias(libs.plugins.kotlinAndroid)
+    alias(libs.plugins.serialization)
 }
 
 android {
@@ -64,6 +65,9 @@ dependencies {
     implementation(libs.ktor.core)
     implementation(libs.ktor.client)
     implementation(libs.ktor.okhttp)
+    implementation(libs.ktor.negotiation)
+    implementation(libs.ktor.json)
+    implementation(libs.kotlinx.serialization.json)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.test.ext.junit)
     androidTestImplementation(libs.espresso.core)
